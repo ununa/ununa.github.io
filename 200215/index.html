@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11 -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      
+      <title>Office Cube</title>
+
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+      <!-- bootstrap & fontawesome -->
+      <link rel="stylesheet" href="./index_files/font-awesome.css">
+
+      <!-- page specific plugin styles -->
+      <link rel="stylesheet" href="./index_files/bootstrap-datepicker3.css">
+      <link rel="stylesheet" href="./index_files/daterangepicker.css">
+      <link rel="stylesheet" href="./index_files/bootstrap-timepicker.css">
+      
+
+       <!-- ace styles -->
+      <link rel="stylesheet" href="./index_files/ace.css" class="ace-main-stylesheet" id="main-ace-style">
+      <link rel="stylesheet" href="./index_files/ace-skins.css">    
+
+      <!--[if lte IE 9]>
+         <link rel="stylesheet" href="/common/assets/css/ace-part2.css" class="ace-main-stylesheet" />
+      <![endif]-->
+
+      <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/common/assets/css/ace-ie.css" />
+      <![endif]-->
+
+      <!-- inline styles related to this page -->
+
+      <!-- ace settings handler -->
+      <script src="./index_files/ace-extra.js.다운로드"></script>
+
+      <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+      <!--[if lte IE 8]>
+      <script src="/common/assets/js/html5shiv.js"></script>
+      <script src="/common/assets/js/respond.js"></script>
+      <![endif]-->
+      
+      <!--[if !IE]> -->
+      <script type="text/javascript">
+         window.jQuery || document.write("<script src='/common/assets/js/jquery.js'>"+"<"+"/script>");
+      </script><script src="./index_files/jquery.js.다운로드"></script>
+
+      <!-- <![endif]-->
+
+      <!--[if IE]>
+      <script type="text/javascript">
+       window.jQuery || document.write("<script src='/assets/js/jquery1x.js'>"+"<"+"/script>");
+      </script>
+      <![endif]-->
+      
+      <script src="./index_files/jquery.form.js.다운로드"></script>
+      <script src="./index_files/jquery.MultiFile.js.다운로드"></script>
+      
+      
+      
+      <link rel="stylesheet" href="./index_files/common.css">   
+      <script type="text/javascript" src="./index_files/common.js.다운로드"></script>
+      
+      <link rel="stylesheet" href="./index_files/ace-dong.css">
+      
+      <script type="text/javascript" src="./index_files/moment.js.다운로드"></script>
+      
+      <!-- common css -->
+    <link rel="stylesheet" href="./index_files/jquery-ui.min.css">
+    <link rel="stylesheet" href="./index_files/bootstrap.css">
+    <link rel="stylesheet" href="./index_files/font-awesome.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./index_files/reset.css">
+    <link rel="stylesheet" href="./index_files/style.css">
+    
+    <!-- common js -->
+    <script type="text/javascript" src="./index_files/jquery-1.10.1.min.js.다운로드"></script>
+    <script type="text/javascript" src="./index_files/jquery-migrate-1.2.1.min.js.다운로드"></script>
+    <script type="text/javascript" src="./index_files/bootstrap.min.js.다운로드"></script>
+    <script type="text/javascript" src="./index_files/jquery-ui.min.js.다운로드"></script>
+    <script type="text/javascript" src="./index_files/jquery.nicescroll.js.다운로드"></script>
+    <script type="text/javascript" src="./index_files/jquery.placeholder.min.js.다운로드"></script>
+    <script type="text/javascript" src="./index_files/jquery.selectBox.js.다운로드"></script>
+    <script type="text/javascript" src="./index_files/custom.js.다운로드"></script>
+    <script type="text/javascript" src="./index_files/jquery.paging.js.다운로드"></script>
+      <link rel="stylesheet" href="./index_files/jquery.paging.css">
+   </head>
+
+   
+         <body style="overflow: hidden;"><section id="wrapper">
+        <!-- #header start -->
+        <header id="header">
+            <div class="sidebar-toggle"><i class="fa fa-bars"></i></div>
+            
+            <!-- .logo -->
+            <h1 class="logo"><a href="http://tobe-smart.iptime.org:8082/appStat/main.jspx?mid=a00"><img src="./index_files/logo.png" alt="logo"></a><span class="pc-only">투비스마트 데모</span></h1>
+            <!-- //.logo -->
+            
+            <div class="top-menu pull-right">
+                <p class="pc-only">
+                           안녕하세요 op_migum님
+                           (센터관리자)
+                           </p>
+                <ul class="pc-only">
+                    <li><a href="http://tobe-smart.iptime.org:8082/appStat/main.jspx?mid=a00">홈</a></li>
+                    <li><a href="http://tobe-smart.iptime.org:8082/odCenterDoor/selectOdCenterDoorList.jspx?mid=z04">도어관리</a></li>
+                    <li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="goMyInfo();">나의정보</a></li>
+                    <li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="goLogout();">로그아웃</a></li>
+                </ul>
+                <ul class="mobile-only">
+                    
+                    <li><a href="http://tobe-smart.iptime.org:8082/odCenterDoor/selectOdCenterDoorList.jspx?mid=z04"><i class="fa fa-columns"></i></a></li>
+                    <li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="goMyInfo();"><i class="fa fa-user"></i></a></li>
+                    <li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="goLogout();" class="logout"><i class="fa fa-sign-out"></i></a></li>
+                </ul>
+            </div>
+        </header>
+
+<script type="text/javascript">
+jQuery(document).ready(function () {
+});
+function goMyInfo(){
+   //setTimeout(function(){ $("#main-popup").modal({
+   //   remote:"/user/selectUserMy.jspx?fromUi=myInfo"
+   //}) }, 10)
+   
+   // 팝업 호출
+   var url = "/user/selectUserMy.jspx?fromUi=myInfo";
+   $("#main-popup > .modal-dialog").load(url, function() { 
+       $("#main-popup").modal("show"); 
+   });
+}
+// My조회
+function goViewMy() {
+   
+   var w = $(window).width();
+   if ($(window).width() >= 700) {
+      w = w - 300;
+   }
+   var h = $(window).height() - 100;
+
+   var url = "/user/selectUserMy.jspx";
+   var params = "fromUi=myInfo";
+    
+   jQuery.ajax({
+      type: "post",
+      url: url,
+      data: params,
+      dataType: "TEXT",
+       //async: false,
+      success: function(data) {
+         jQuery("#dialog-popup").children().remove();
+         jQuery("#dialog-popup").append(data);
+
+         var dialog = jQuery("#dialog-popup").removeClass('hide').dialog({
+            modal: true,
+            title: "나의정보",
+            title_html: true,
+            width: w,
+            height: h,
+            buttons: [
+            {
+               html: "<i class='ace-icon fa fa-pencil-square-o bigger-110'></i> <span class='smaller-90'>수정</span>",
+               "class" : "btn btn-success btn-minier",
+               click: function() {
+                  goEditMy('USR_181221110854503_4174');
+               } 
+            },
+            {
+               html: "<i class='ace-icon fa fa-times bigger-110'></i> <span class='smaller-90'>닫기</span>",
+               "class" : "btn btn-primary btn-minier",
+               click: function() {
+                  jQuery(this).dialog("close"); 
+               } 
+            }
+            ]
+         });
+      },
+      error: function() { 
+         alert('Error');
+      }
+   });       
+   
+   return false;
+}
+
+// 수정
+function goEditMy(uid) {
+   
+   var w = $(window).width();
+   if ($(window).width() >= 700) {
+      w = w - 300;
+   }
+   var h = $(window).height() - 100;
+
+   var url = "/user/userModify.jspx";
+   var params = "uid=" + uid + "&isMy=Y";
+    
+   jQuery.ajax({
+      type: "post",
+      url: url,
+      data: params,
+      dataType: "TEXT",
+       //async: false,
+      success: function(data) {
+         jQuery("#dialog-popup").children().remove();
+         jQuery("#dialog-popup").append(data);
+         
+         var dialog = jQuery("#dialog-popup").removeClass('hide').dialog({
+            modal: true,
+            title: "사용자 수정",
+            title_html: true,
+            width: w,
+            height: h,
+            buttons: [
+            {
+               html: "<i class='ace-icon fa fa-check bigger-110'></i> <span class='smaller-90'>수정</span>",
+               "class" : "btn btn-primary btn-minier",
+               click: function() {
+                  goReg();                   
+               } 
+            },
+            {
+               html: "<i class='ace-icon fa fa-times bigger-110'></i> <span class='smaller-90'>닫기</span>",
+               "class" : "btn btn-primary btn-minier",
+               click: function() {
+                  jQuery(this).dialog("close"); 
+               } 
+            }
+            ]
+         });   
+      },
+      error: function() { 
+         alert('Error');
+      }
+   });
+   
+   return false;
+}
+
+// 로그아웃, 에이젼트 로그아웃
+function goLogout() {
+   var url = "/user/userLogout.jspx";
+   jQuery(location).attr('href', url);
+   
+   /*
+   // 에이젼트 로그아웃
+   try{ jQuery.blockUI({ message: jQuery('#loading'), css:{ border: '0px solid #a00' }}); }catch(e) {}
+   
+   var url = "/user/checkUserLogout.jspx";
+   var params = jQuery("#frm").serializeArray();
+
+   jQuery.ajax({
+      type: "post",
+      url: url,
+      data: params,
+      dataType: "json",
+      //async: false,
+      success: function(data) {
+         
+         if (data.result_yne == 'Y') {
+            //alert("로그인이 완료되었습니다.");
+            var url = "/user/userLogout.jspx";
+            
+            var urlAgent = "https://localhost:4433/Logout";
+            var paramsAgent = JSON.stringify(data.agent);
+            //console.log(paramsAgent);
+            //alert(paramsAgent);
+      
+            jQuery.ajax({
+               type: "post",
+               url: urlAgent,
+               data: paramsAgent,
+               dataType: "json",
+               //async: false,
+               success: function(dataAgent) {
+                  //console.log(dataAgent);
+                  
+                  if (dataAgent.result == 'T') {
+                     //alert("로그인이 완료되었습니다.");
+                     jQuery(location).attr('href', url);
+                  } else {
+                     //alert("로그아웃이 실패하었습니다.\n" + data.result_msg);
+                     //alert('에이젼트 실행없이 로그아웃을 진행합니다.');
+                     jQuery(location).attr('href', url);
+                  }
+                  setTimeout(jQuery.unblockUI, 200);
+               },
+               error: function() { 
+                  //alert('에이젼트 실행없이 로그아웃을 진행합니다.');
+                  jQuery(location).attr('href', url);
+                  setTimeout(jQuery.unblockUI, 200);
+               }
+            });            
+         } else {
+            alert("로그아웃이 실패하었습니다.\n" + data.result_msg);
+            setTimeout(jQuery.unblockUI, 200);
+         }
+      },
+      error: function() { 
+         alert('Error');
+         setTimeout(jQuery.unblockUI, 200);
+      }
+   }); 
+   */
+}
+
+</script>
+
+
+
+
+
+
+
+    
+<!-- /section:basics/navbar.layout -->
+ <div class="main-container" id="main-container">
+   <script type="text/javascript">
+      try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+   </script>
+   <!-- /section:basics/sidebar.horizontal -->
+
+<!-- 
+         <div class="hidden">
+         
+            <button data-target="#sidebar2" type="button" class="pull-left menu-toggler navbar-toggle" id="header_menu_2">
+               <span class="sr-only">Toggle sidebar</span>
+               <i class="ace-icon fa fa-folder-o white bigger-125" id="header_menu_2_i"></i>
+            </button>
+ -->
+
+		<div id="sidebar" class="get-nicer on" data-accordion-group="" tabindex="5000" style="overflow: hidden; outline: none;">
+			<script type="text/javascript">
+                  try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+               </script> 
+			
+			<ul class="accordion nice-wrapper ui-accordion ui-widget ui-helper-reset" data-accordion="" role="tablist">
+
+                  <li class="">
+                    	<p onclick="location.href=&#39;/appStat/main.jspx?mid=a00&#39;" class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-1" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><img src="./index_files/icon_menu_01.png" alt="">대쉬보드</p>
+                	</li>
+                	<li class="">
+					
+					<p onclick="location.href=&#39;/userPay/userPaySumStatList.jspx?mid=i11&#39;" class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-2" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><img src="./index_files/icon_menu_09.png" alt="">매출내역</p>
+				</li>
+
+                  
+
+                  
+                  
+                  
+                  <li class="active">
+                     <p data-control="" class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-header-active ui-state-active ui-accordion-icons" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="true" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span><img src="./index_files/icon_menu_03.png" alt="">좌석</p>
+
+                     <ul class="submenu ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content ui-accordion-content-active" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="false" style="display: block;">
+                        <li class="on ">
+                           <a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11">좌석현황 </a>
+                           <b class="arrow"></b></li>
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odSeatUse/odSeatUseStatList.jspx?mid=c13">우선종료좌석 </a>
+                           <b class="arrow"></b></li>
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odSeatUse/odSeatUseList.jspx?mid=c12">좌석이용내역 </a>
+                           <b class="arrow"></b></li>
+                        
+
+                     </ul>                                    
+                  </li>
+                  
+                  <li class="">
+                     <p data-control="" class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-5" aria-controls="ui-id-6" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><img src="./index_files/icon_menu_04.png" alt="">사물함</p>
+
+                     <ul class="submenu ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-6" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true" style="display: none;">
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odLocker/odLockerStat.jspx?mid=a11">사물함현황 </a>
+                           <b class="arrow"></b></li>
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odLockerUse/odLockerUseStatList.jspx?mid=a13">우선종료사물함 </a>
+                           <b class="arrow"></b></li>
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odLockerUse/odLockerUseList.jspx?mid=a12">사물함이용내역 </a>
+                           <b class="arrow"></b></li>
+
+                     </ul>                                    
+                  </li>        
+                  
+                  <li class="">
+                     <p data-control="" class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-7" aria-controls="ui-id-8" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><img src="./index_files/icon_menu_05.png" alt="">시간패키지</p>
+
+                     <ul class="submenu ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-8" aria-labelledby="ui-id-7" role="tabpanel" aria-hidden="true" style="display: none;">
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odPrepaid/odPrepaidList.jspx?mid=d11&amp;pcd=PAYALL">적립내역 </a>
+                           <b class="arrow"></b></li>
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odPrepaid/odPrepaidList.jspx?mid=d12&amp;pcd=USEALL">사용내역 </a>
+                           <b class="arrow"></b></li>
+                        <!-- 
+                        <li class="">
+                           <a href="/odPrepaid/odPrepaidList.jspx?mid=d13&pcd=ADD"></i>적립내역 </a>
+                           <b class="arrow"></b></li>
+                            -->
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odPrepaidSum/odPrepaidSumList.jspx?mid=d14">잔여내역 </a>
+                           <b class="arrow"></b></li>
+                     </ul>                                    
+                  </li>
+                  <li class="">
+                     <p data-control="" class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-9" aria-controls="ui-id-10" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><img src="./index_files/icon_menu_02.png" alt="">기간권</p>
+
+                     <ul class="submenu ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-10" aria-labelledby="ui-id-9" role="tabpanel" aria-hidden="true" style="display: none;">
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odDayly/odDaylyList.jspx?mid=x11">구매내역 </a>
+                           <b class="arrow"></b></li>
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odDayly/odDaylyUseList.jspx?mid=x12">잔여내역 </a>
+                           <b class="arrow"></b></li>
+                     </ul>                                    
+                  </li>
+                 
+                  
+                  <li class="">
+                     <p data-control="" class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-11" aria-controls="ui-id-12" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><img src="./index_files/icon_menu_06.png" alt="">센터관리</p>
+                     
+                     
+                     <ul class="submenu ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-12" aria-labelledby="ui-id-11" role="tabpanel" aria-hidden="true" style="display: none;">
+                     
+                        
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odCenter/odCenterList1.jspx?mid=z13">센터 정보</a>
+                           <b class="arrow"></b></li>
+                        
+                           
+                        
+                        
+                        
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odAfterFee/odAfterFeeList.jspx?mid=z20">좌석종료후 설정</a>
+                           <b class="arrow"></b></li>
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/notice/noticeList.jspx?mid=z02">공지사항 관리</a>
+                           <b class="arrow"></b></li>
+                        
+                        
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/user/userList.jspx?mid=z03">사용자 관리</a>
+                           <b class="arrow"></b></li>
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odCenterDoor/selectOdCenterDoorList.jspx?mid=z04">QR도어 관리</a>
+                           <b class="arrow"></b></li>
+                        <!-- 
+                        <li class="">
+                           <a href="/odCenterDiscount/OdcenterDiscountList.jspx?mid=z05"></i>할인율 관리</a>
+                           <b class="arrow"></b></li>
+                            -->
+                            
+                        
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odCenterMemberBlack/odCenterMemberBlackList.jspx?mid=z06">블랙리스트 관리</a>
+                           <b class="arrow"></b></li>
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odCenterManager/odCenterManagerList.jspx?mid=z19">센터관리자 관리</a>
+                           <b class="arrow"></b></li>
+                        
+                     </ul>                                    
+                  </li>
+                                    
+                  <li class="">
+                     <p data-control="" class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-13" aria-controls="ui-id-14" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><img src="./index_files/icon_menu_08.png" alt="">로그</p>
+                     
+                     <ul class="submenu ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-14" aria-labelledby="ui-id-13" role="tabpanel" aria-hidden="true" style="display: none;">
+                           
+                        <li class="">
+                           <a href="http://tobe-smart.iptime.org:8082/odSendBiztalk/odSendBiztalkList.jspx?mid=h12">알림톡 발송내역 </a>
+                           <b class="arrow"></b></li>
+                     </ul>                                    
+                  </li>
+                  
+
+               </ul><!-- /.nav-list -->
+
+            </div><!-- .sidebar -->
+            
+<!--             
+         </div>      
+ -->
+      
+
+<div id="contents">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="fluid-container">
+	<article class="page-bar">
+		<i class="fa fa-home"></i> <a href="http://tobe-smart.iptime.org:8082/appStat/main.jspx?mid=a00">Home</a> <i class="fa fa-angle-right"></i> 좌석 <i class="fa fa-angle-right"></i> 좌석현황
+	</article>
+</section>
+<!-- PAGE CONTENT BEGINS -->
+         <form method="post" class="form-horizontal" onsubmit="return false;" id="frm" name="frm">
+            <input type="hidden" name="searchDetail" value="Y">
+<section class="container inner">
+	<div class="row nm">
+		<div class="col-lg-12 np">
+			<article class="search_wrap">
+				<div class="search_box search_box1">
+					<span class="pull-left">센터</span>
+					<p class="select_wrap">
+						<select class="" name="searchOdCenterUid" id="searchOdCenterUid" style="margin-left: 5px; margin-right: 10px;">
+							
+								<option value="OCE_181220134341628_3181">투비스마트 데모</option>
+							
+						</select>
+					</p>
+				</div>
+				<div class="search_box search_box3 hide">
+					<span class="pull-left">검색일시</span>
+					<p class="input_wrap">
+						<input type="text" class="input-daterange" name="searchUseDate" id="searchUseDate" maxlength="20" onkeydown="return false;">
+					</p>
+					<a href="javascript:;">조회</a>
+				</div>
+			</article>
+		</div>
+		<div class="col-lg-12 np">
+			<article id="state-table">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="hidden-480 center"><i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>검색일</th>
+							<th class="hidden-480 center">총좌석</th>
+							<th class="center">이용가능</th>
+							<th class="hidden-480 center">이용불가</th>
+							<th class="center">이용중</th>
+							<th class="center">마감예정</th>
+							<th class="hidden-480 center">사용율</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="hidden-480 center"><span id="svDate">2020-02-12 15:16</span></td>
+                  <td class="hidden-480 center"><span id="svAll">56</span></td>
+                  <td class="center">
+                     <span class="badge badge-grey"><span id="sv31">50</span></span>
+                  </td>
+                  <td class="hidden-480 center">
+                     <span class="badge badge-danger"><span id="sv33">2</span></span>
+                  </td>
+                  <td class="center">
+                     <span class="badge badge-info"><span id="sv32">4</span></span>
+                  </td>
+                  <td class="center">
+                     <span class="badge badge-warning"><span id="sv34">0</span></span>
+                  </td>
+                  <td class="hidden-480 center"><span id="svPer">7.14</span>%</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</article>
+		</div>
+		<div class="row" style="padding: 12px;">
+            <div class="col-xs-12 col-sm-12" id="previewBody" style="height: 2776px;"><div style="position:absolute; top:0px; left:0px; width:1256px; height:2776px; background-image: url(&#39;../common/download.jspx?uid=b2d7c9390ae64c19b4ee60e2d628d31a.png&#39;); background-size: 100% 100%; "></div> <div class="dropup dropdown-hover" style="position:absolute; left:1006px; top:2364px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">30</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 30</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220151542553_7532&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220151542553_7532&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220151542553_7532&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:1050px; top:2110px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">29</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 29</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220164951256_6300&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220164951256_6300&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220164951256_6300&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:1050px; top:1858px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">28</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 28</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165015115_4243&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165015115_4243&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165015115_4243&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:1050px; top:1606px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">27</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 27</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165041868_3678&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165041868_3678&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165041868_3678&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:1050px; top:1354px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">26</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 26</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165100457_7098&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165100457_7098&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165100457_7098&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:1050px; top:1102px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">25</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 25</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165152519_8092&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165152519_8092&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165152519_8092&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:1050px; top:850px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">24</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 24</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165209209_7541&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165209209_7541&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165209209_7541&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:1050px; top:465px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">23</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 23</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165237882_9931&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165237882_9931&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165237882_9931&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:826px; top:465px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">22</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 22</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165250496_8820&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165250496_8820&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165250496_8820&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:738px; top:325px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">21</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 21</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165302912_8381&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165302912_8381&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165302912_8381&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:894px; top:325px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">20</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 20</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165317504_3985&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165317504_3985&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165317504_3985&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:1050px; top:325px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">19</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 19</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165326319_1004&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165326319_1004&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165326319_1004&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:943px; top:40px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">18</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 18</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165358993_2690&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165358993_2690&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165358993_2690&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:787px; top:40px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">17</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 17</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165410543_5949&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165410543_5949&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165410543_5949&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:631px; top:40px; width:150px; height:80px; background: #d15b47; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">16</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 16</a></li><li class="divider"></li><li><a href="javascript:odSeatReady(&#39;OSE_181220165422359_8483&#39;);" tabindex="-1">사용가능 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165422359_8483&#39;);" tabindex="-1">예약현황</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:475px; top:40px; width:150px; height:80px; background: #d15b47; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">15</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 15</a></li><li class="divider"></li><li><a href="javascript:odSeatReady(&#39;OSE_181220165518842_9221&#39;);" tabindex="-1">사용가능 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165518842_9221&#39;);" tabindex="-1">예약현황</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:319px; top:40px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">14</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 14</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165542178_1909&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165542178_1909&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165542178_1909&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165542178_1909&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:163px; top:40px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">13</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 13</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165555522_4500&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165555522_4500&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165555522_4500&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165555522_4500&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:59px; top:325px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">12</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 12</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165613537_7449&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165613537_7449&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165613537_7449&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165613537_7449&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:215px; top:325px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">11</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 11</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165625368_2446&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165625368_2446&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165625368_2446&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:371px; top:325px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">10</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 10</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165640600_1407&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165640600_1407&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165640600_1407&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165640600_1407&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:283px; top:465px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">9</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 9</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165707987_9674&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165707987_9674&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165707987_9674&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165707987_9674&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:59px; top:465px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">8</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 8</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165720320_0911&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165720320_0911&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165720320_0911&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165720320_0911&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:59px; top:915px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">7</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 7</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165743168_5401&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165743168_5401&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165743168_5401&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165743168_5401&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:59px; top:1167px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">6</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 6</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165755200_0780&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165755200_0780&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165755200_0780&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165755200_0780&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:59px; top:1419px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">5</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 5</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165804528_0065&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165804528_0065&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165804528_0065&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165804528_0065&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:59px; top:1671px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">4</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 4</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165835217_0138&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165835217_0138&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165835217_0138&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165835217_0138&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:59px; top:1923px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">3</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 3</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165844798_9062&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165844798_9062&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165844798_9062&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165844798_9062&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:59px; top:2175px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">2</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 2</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165857696_5195&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165857696_5195&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165857696_5195&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165857696_5195&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:103px; top:2412px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">1</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 1</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220165916450_2303&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220165916450_2303&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220165916450_2303&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_181220165916450_2303&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:709px; top:1329px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">40</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 40</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170148511_8308&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170148511_8308&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170148511_8308&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:553px; top:1329px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">41</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 41</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170200911_3455&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170200911_3455&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170200911_3455&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:397px; top:1329px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">42</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 42</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170215656_5158&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170215656_5158&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170215656_5158&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:397px; top:1243px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">37</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 37</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170231718_8208&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170231718_8208&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170231718_8208&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:553px; top:1243px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">38</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 38</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170243624_2606&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170243624_2606&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170243624_2606&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:709px; top:1243px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">39</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 39</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170257630_4441&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170257630_4441&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170257630_4441&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:709px; top:921px; width:150px; height:80px; background: #3a87ad; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">34</span></div><div class="box-status">   <span class="text">○</span></div><div class="box-detailed">   <p class="type">자유석</p>   <p class="tel">01057981174</p>   <p class="user">01057981174</p>   <p class="date">02-12 17:10</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 34</a></li><li class="divider"></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseInfo(&#39;OSU_200212141053705_8562&#39;);" tabindex="-1">상세보기 </a></li><li><a href="javascript:odSeatUseEnd(&#39;OSU_200212141053705_8562&#39;);" tabindex="-1">퇴실처리</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseExtend(&#39;OSU_200212141053705_8562&#39;);" tabindex="-1">시간연장 (이후 예약 없음)</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseChange(&#39;OSU_200212141053705_8562&#39;);" tabindex="-1">좌석변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170322569_6150&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170322569_6150&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:553px; top:921px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">35</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 35</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170339368_6182&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170339368_6182&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170339368_6182&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:397px; top:921px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">36</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 36</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170349006_8880&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170349006_8880&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170349006_8880&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:397px; top:835px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">31</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 31</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170411624_4794&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170411624_4794&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170411624_4794&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:553px; top:835px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">32</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 32</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170420390_8184&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170420390_8184&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170420390_8184&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:709px; top:835px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">33</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 33</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170435496_9809&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170435496_9809&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170435496_9809&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:128px; top:2563px; width:250px; height:160px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">A</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">시간의방룸</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [시간의방룸] A</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_181220170939560_8021&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_181220170939560_8021&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_181220170939560_8021&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:433px; top:1662px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">43</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">고정석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [고정석] 43</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_190311131928005_8850&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_190311131928005_8850&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_190311131928005_8850&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_190311131928005_8850&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:433px; top:1831px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">44</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">고정석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [고정석] 44</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_190311131952850_8839&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_190311131952850_8839&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_190311131952850_8839&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_190311131952850_8839&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:433px; top:2000px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">45</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">고정석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [고정석] 45</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_190311131953464_1807&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_190311131953464_1807&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_190311131953464_1807&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_190311131953464_1807&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:433px; top:2169px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">46</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">고정석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [고정석] 46</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_190311131954372_6171&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_190311131954372_6171&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_190311131954372_6171&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_190311131954372_6171&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:674px; top:2169px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">47</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">고정석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [고정석] 47</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_190311131955958_9524&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_190311131955958_9524&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_190311131955958_9524&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_190311131955958_9524&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:674px; top:2000px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">48</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">고정석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [고정석] 48</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_190311131957553_8143&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_190311131957553_8143&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_190311131957553_8143&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_190311131957553_8143&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:674px; top:1831px; width:150px; height:80px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">49</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">고정석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [고정석] 49</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_190311131959094_0100&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_190311131959094_0100&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_190311131959094_0100&#39;);" tabindex="-1">좌석등록</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatIotControl(&#39;OSE_190311131959094_0100&#39;);" tabindex="-1">전등켜기</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:80px; top:0px; width:58px; height:80px; background: #3a87ad; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">100</span></div><div class="box-status">   <span class="text">○</span></div><div class="box-detailed">   <p class="type">자유석</p>   <p class="tel">01044475554</p>   <p class="user">아무개</p>   <p class="date">02-13 00:00</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 100</a></li><li class="divider"></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseInfo(&#39;OSU_200212150400427_0928&#39;);" tabindex="-1">상세보기 </a></li><li><a href="javascript:odSeatUseEnd(&#39;OSU_200212150400427_0928&#39;);" tabindex="-1">퇴실처리</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseExtend(&#39;OSU_200212150400427_0928&#39;);" tabindex="-1">시간연장 (이후 예약 없음)</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseChange(&#39;OSU_200212150400427_0928&#39;);" tabindex="-1">좌석변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_191216112817559_8288&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_191216112817559_8288&#39;);" tabindex="-1">좌석등록</a></li></ul></div>
+            
+            
+            <div class="dropup dropdown-hover" style="position:absolute; left:160px; top:130px; width:70px; height:44px; background: #3a87ad; text-align:left; vertical-align:middle;"><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 101</a></li><li class="divider"></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseInfo('OSU_200212150425619_6956');" tabindex="-1">상세보기 </a></li><li><a href="javascript:odSeatUseEnd('OSU_200212150425619_6956');" tabindex="-1">퇴실처리</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseExtend('OSU_200212150425619_6956');" tabindex="-1">시간연장 (이후 예약 없음)</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseChange('OSU_200212150425619_6956');" tabindex="-1">좌석변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList('OSE_191216112846427_8750');" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert('OSE_191216112846427_8750');" tabindex="-1">좌석등록</a></li></ul><div class="box-inner"><div class="box-index">   <span class="text">000</span></div><div class="box-status">   <span class="text">○</span></div><div class="box-detailed">   <p class="type">자유석</p>   <p class="tel">01044475554</p>  <p class="user">아무개</p> <p class="date">02-13 00:00</p></div></div></div>
+
+
+            
+            
+            <div class="dropup dropdown-hover" style="position:absolute; left:160px; top:220px; width:70px; height:65px; background: #3a87ad; text-align:left; vertical-align:middle;"><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 101</a></li><li class="divider"></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseInfo('OSU_200212150425619_6956');" tabindex="-1">상세보기 </a></li><li><a href="javascript:odSeatUseEnd('OSU_200212150425619_6956');" tabindex="-1">퇴실처리</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseExtend('OSU_200212150425619_6956');" tabindex="-1">시간연장 (이후 예약 없음)</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseChange('OSU_200212150425619_6956');" tabindex="-1">좌석변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList('OSE_191216112846427_8750');" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert('OSE_191216112846427_8750');" tabindex="-1">좌석등록</a></li></ul><div class="box-inner"><div class="box-index">   <span class="text">001</span></div><div class="box-status">   <span class="text">○</span></div><div class="box-detailed">   <p class="type">자유석</p>   <p class="tel">01044475554</p>  <p class="user">아무개</p> <p class="date">02-13 00:00</p></div></div></div>
+            
+            
+            <div class="dropup dropdown-hover" style="position:absolute; left:80px; top:100px; width:70px; height:45px; background: #3a87ad; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">101</span></div><div class="box-status">   <span class="text">○</span></div><div class="box-detailed">   <p class="type">자유석</p>   <p class="tel">01044475554</p>  <p class="user">아무개</p> <p class="date">02-13 00:00</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 101</a></li><li class="divider"></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseInfo(&#39;OSU_200212150425619_6956&#39;);" tabindex="-1">상세보기 </a></li><li><a href="javascript:odSeatUseEnd(&#39;OSU_200212150425619_6956&#39;);" tabindex="-1">퇴실처리</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseExtend(&#39;OSU_200212150425619_6956&#39;);" tabindex="-1">시간연장 (이후 예약 없음)</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseChange(&#39;OSU_200212150425619_6956&#39;);" tabindex="-1">좌석변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_191216112846427_8750&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_191216112846427_8750&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:80px; top:200px; width:45px; height:70px; background: #3a87ad; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">102</span></div><div class="box-status">   <span class="text">○</span></div><div class="box-detailed">   <p class="type">자유석</p>   <p class="tel">01044475554</p>   <p class="user">아무개</p>   <p class="date">02-13 00:00</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 102</a></li><li class="divider"></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseInfo(&#39;OSU_200212150447246_9708&#39;);" tabindex="-1">상세보기 </a></li><li><a href="javascript:odSeatUseEnd(&#39;OSU_200212150447246_9708&#39;);" tabindex="-1">퇴실처리</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseExtend(&#39;OSU_200212150447246_9708&#39;);" tabindex="-1">시간연장 (이후 예약 없음)</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatUseChange(&#39;OSU_200212150447246_9708&#39;);" tabindex="-1">좌석변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_191216112948299_4684&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_191216112948299_4684&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:80px; top:300px; width:76px; height:70px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">200</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 200</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_200210112635861_4867&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_200210112635861_4867&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_200210112635861_4867&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:609px; top:1020px; width:95px; height:69px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">522</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] 522</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_200210172436861_6332&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_200210172436861_6332&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_200210172436861_6332&#39;);" tabindex="-1">좌석등록</a></li></ul></div><div class="dropup dropdown-hover" style="position:absolute; left:565px; top:805px; width:95px; height:69px; background: #a0a0a0; text-align:left; vertical-align:middle;"><div class="box-index">   <span class="text">ㅈㄷ</span></div><div class="box-status">   <span class="text"></span></div><div class="box-detailed">   <p class="type">자유석</p></div><ul class="dropdown-menu dropdown-light"><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" tabindex="-1">좌석 : [자유석] ㅈㄷ</a></li><li class="divider"></li><li><a href="javascript:odSeatClose(&#39;OSE_200210172440835_6010&#39;);" tabindex="-1">사용불가 좌석으로 변경</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatReserveList(&#39;OSE_200210172440835_6010&#39;);" tabindex="-1">예약현황</a></li><li><a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" onclick="odSeatToInsert(&#39;OSE_200210172440835_6010&#39;);" tabindex="-1">좌석등록</a></li></ul></div></div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+	</div>
+</section>
+</form>
+<!-- </div>/.page-content -->
+
+
+
+
+    
+
+
+<style>
+
+#popup .modal-dialog {
+    left: 210px;
+    top: 70px;
+    max-width:100%;
+    max-height:auto;
+    padding-left:0px;
+    padding-top:0px;
+    
+}
+#popup .modal-content {
+    position: fixed;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 0px solid #999;
+    border: 0px solid rgba(0, 0, 0, .2);
+    border-radius: 0px;
+    outline: 0;
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, .5);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, .5);
+}
+
+.bootstrap-datetimepicker-widget th {
+    text-align: center !important;
+    padding-right: 0px !important;
+}
+
+.bootstrap-datetimepicker-widget td {
+    text-align: center !important;
+    width: 25% !important;
+    padding-left: 5px !important;
+    padding-right: 7px !important;
+}
+</style>
+<div class="modal" id="main-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+		<div class="modal-dialog" style="">
+            <div class="modal-content">
+            </div>
+            </div>
+</div> 
+<div class="modal fade" id="sub-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+<div class="modal-dialog" style="">
+            <div class="modal-content">
+            </div>
+            </div>
+</div>
+<div class="modal fade" id="preview-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+		<div class="modal-dialog" style="">
+            <div class="modal-content">
+            </div>
+            </div>
+</div>
+         <div id="dialog-popup" class="hide"></div>
+         <div id="dialog-sub-popup" class="hide"></div>
+         <div id="view-popup" class="hide"></div>
+<!--          <div id="notice-popup-1" class="hide"></div>
+         <div id="notice-popup-2" class="hide"></div>
+         <div id="notice-popup-3" class="hide"></div> -->
+         
+         
+         
+         <footer id="footer">
+                <div class="info">
+                    <p class="address">
+                        <span class="address1">본점 : 대전광역시 유성구 테크노2로 13-14</span><br class="mobile-only">
+                        <span class="address2">연구소 : 경기도 성남시 분당구 황새울로 200번길 34, 코포모빌딩 402호</span>
+                    </p>
+                    <p class="contact">
+                        <!-- <span class="tel1">TEL : 1577-3119</span>
+                        <span class="fax">FAX : 031-701-4119</span><br class="mobile-only" /> -->
+                        <span class="email">EMAIL : <a href="mailto:kangdo@tobesmart.co.kr"> kangdo@tobesmart.co.kr</a></span>
+                        <span class="email">VER : 20200212_0345_1_608
+</span>
+                    </p>
+                    <p class="copyright">Copyright 2018 (C) Studycube. All rights reserved.</p>
+                </div>
+            </footer>
+         <div class="bg-holder-content full text-white text-center" id="loading" style="display: none; cursor: default;">
+            <div class="full-center">
+               <div class="spinner-clock">
+                  <div class="spinner-clock-hour"></div>
+                  <div class="spinner-clock-minute"></div>
+               </div>
+               <h5 class="text-default">요청을 처리중입니다.<br>잠시만 기다려주세요.</h5>
+               <!-- <p class="text-bigger"></p> -->
+               <!-- <p class="text-smaller"></p> -->
+               <!-- <p><a class="btn btn-primary" id="btn_search_stop">중지</a></p> -->
+            </div>
+         </div></div><!-- /.main-content -->
+         </div></section>
+
+         <a href="http://tobe-smart.iptime.org:8082/odSeat/odSeatStat.jspx?mid=c11#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+         </a>
+
+
+      <!-- basic scripts -->
+      <script type="text/javascript">
+      jQuery(document).ready(function () {
+         $(".modal").on("show.bs.modal", ".modal", function(){
+            $(this).draggable();
+            $(this).css("overflow-y", "scroll");   
+      	});
+         $(".modal").on("hide.bs.modal", ".modal", function(){
+            $(this).draggable();
+            $(this).css("overflow-y", "scroll");   
+      	});
+         $(".modal").on("hidden.bs.modal", ".modal", function(){
+            history.pushState(null, null, document.URL);
+            $(this).draggable();
+            $(this).css("overflow-y", "scroll");   
+      	});
+      });
+      window.addEventListener('popstate', function () {
+         if($('div').hasClass('modal fade in')){
+             $(".modal").modal("hide");
+          }else if($('div').hasClass('modal in')){
+                $(".modal").modal("hide");
+             }
+     });
+         if('ontouchstart' in document.documentElement) document.write("<script src='/common/assets/js/jquery.mobile.custom.js'>"+"<"+"/script>");
+         
+         /*
+         jQuery(document).ready(function () {
+            jQuery("#header_menu_1").bind("click", function () {
+               if (jQuery("#header_menu_1_i").hasClass('fa-folder')) {
+                  jQuery("#header_menu_1_i").removeClass("fa-folder").addClass("fa-folder-open");
+               } else {
+                  jQuery("#header_menu_1_i").removeClass("fa-folder-open").addClass("fa-folder");
+               }
+            }).css({"cursor" : "pointer"});
+         });
+         */
+      </script>
+      
+
+      <!-- page specific plugin scripts -->
+      <!--
+      <script src="/common/assets/js/dataTables/jquery.dataTables.js"></script>
+      <script src="/common/assets/js/dataTables/jquery.dataTables.bootstrap.js"></script>
+      <script src="/common/assets/js/dataTables/extensions/TableTools/js/dataTables.tableTools.js"></script>
+      <script src="/common/assets/js/dataTables/extensions/ColVis/js/dataTables.colVis.js"></script>
+      -->
+
+      <!-- ace scripts -->
+      
+      
+      <script src="./index_files/moment.js(1).다운로드"></script>
+      <script src="./index_files/bootstrap-datepicker.js.다운로드"></script>
+      <script src="./index_files/daterangepicker.js.다운로드"></script>
+      <script src="./index_files/bootstrap-timepicker.js.다운로드"></script>
+      <script type="text/javascript" src="./index_files/jquery.blockUI.js.다운로드"></script>
+      
+      <!--
+      <script src="/common/assets/js/date-time/bootstrap-datetimepicker.js"></script>
+
+      <script src="/common/assets/js/ace/elements.treeview.js"></script>
+      <script src="/common/assets/js/ace/elements.scroller.js"></script>
+      <script src="/common/assets/js/ace/elements.colorpicker.js"></script>
+      <script src="/common/assets/js/ace/elements.fileinput.js"></script>
+      <script src="/common/assets/js/ace/elements.typeahead.js"></script>
+      <script src="/common/assets/js/ace/elements.wysiwyg.js"></script>
+      <script src="/common/assets/js/ace/elements.spinner.js"></script>
+      <script src="/common/assets/js/ace/elements.wizard.js"></script>
+      <script src="/common/assets/js/ace/elements.aside.js"></script>
+      <script src="/common/assets/js/ace/ace.js"></script>
+      <script src="/common/assets/js/ace/ace.ajax-content.js"></script>
+      <script src="/common/assets/js/ace/ace.touch-drag.js"></script>
+      <script src="/common/assets/js/ace/ace.sidebar.js"></script>
+      <script src="/common/assets/js/ace/ace.sidebar-scroll-1.js"></script>
+      <script src="/common/assets/js/ace/ace.submenu-hover.js"></script>
+      <script src="/common/assets/js/ace/ace.widget-box.js"></script>
+      <script src="/common/assets/js/ace/ace.settings.js"></script>
+      <script src="/common/assets/js/ace/ace.settings-rtl.js"></script>
+      <script src="/common/assets/js/ace/ace.settings-skin.js"></script>
+      <script src="/common/assets/js/ace/ace.widget-on-reload.js"></script>
+      <script src="/common/assets/js/ace/ace.searchbox-autocomplete.js"></script>
+      -->
+
+      <!-- 
+      <link rel="stylesheet" href="/common/assets/css/ace.onpage-help.css" />
+      <script src="/common/assets/js/ace/elements.onpage-help.js?v=2"></script>
+      <script src="/common/assets/js/ace/ace.onpage-help.js?v=1"></script>
+       -->
+
+      <!-- inline scripts related to this page -->
+      <!-- <script type="text/javascript">
+         jQuery(function($) {
+            //$('#sidebar2').insertBefore('.page-content').ace_sidebar('collapse', false);
+            $('#sidebar2').insertBefore('.page-content');
+            
+            $('#navbar').addClass('h-navbar');
+            $('.footer').insertAfter('.main-content-inner');
+            
+            $('.page-content').addClass('main-content');
+            
+            $('.menu-toggler[data-target="#sidebar2"]').insertBefore('.navbar-brand');
+            
+            $(document).on('settings.ace.two_menu', function(e, event_name, event_val) {
+             if(event_name == 'sidebar_fixed') {
+                if( $('#sidebar').hasClass('sidebar-fixed') ) $('#sidebar2').addClass('sidebar-fixed')
+                else $('#sidebar2').removeClass('sidebar-fixed')
+             }
+            }).triggerHandler('settings.ace.two_menu', ['sidebar_fixed' ,$('#sidebar').hasClass('sidebar-fixed')]);
+            
+            $('#sidebar2[data-sidebar-hover=true]').ace_sidebar_hover('reset');
+            $('#sidebar2[data-sidebar-scroll=true]').ace_sidebar_scroll('reset', true);
+         }) -->
+   
+
+
+
+<script type="text/javascript">
+   // 로딩
+   jQuery(document).ready(
+         
+         function() {
+            
+            $('#sub-popup').on('hide.bs.modal', function () {
+               $(this).removeData('bs.modal');
+             });
+            $(".modal").on("show.bs.modal", ".modal", function(){
+               $(this).draggable();
+               $(this).css("overflow-y", "scroll");   
+         	});
+
+            // 검색버튼
+            jQuery("#btn_search").bind("click", function() {
+               searchPreview();
+            }).css({
+               "cursor" : "pointer"
+            });
+
+            // 검색날짜
+            jQuery('.input-daterange').datetimepicker({
+               format : 'YYYY-MM-DD HH:mm'
+            });
+
+            // 검색기간
+            var startDate = moment(new Date()).format("YYYY-MM-DD HH:mm"); // 현재날짜
+            jQuery('input[name=searchUseDate]').val(startDate);
+
+            
+            // 센터선택
+            $("#searchOdCenterUid").change(
+                  function() {
+
+                     // 센터좌석유형 가져오기
+                     getOdSeatType($(this).val(),
+                           "01",
+                           "searchOdSeatTypeUid");
+
+                     searchPreview();
+                  });
+
+            // 센터좌석유형선택
+            $("#searchOdSeatTypeUid").change(function() {
+               searchPreview();
+            });
+
+            // 센터좌석유형 가져오기
+            getOdSeatType(jQuery("#searchOdCenterUid").val(),
+                  "01", "searchOdSeatTypeUid");
+
+            // 초기화
+            searchPreview();
+         });
+
+   // 검색
+   function searchPreview() {
+      try {
+         jQuery.blockUI({
+            message : jQuery('#loading'),
+            css : {
+               border : '0px solid #a00'
+            }
+         });
+      } catch (e) {
+      }
+
+      var url = "/odSeat/selectOdSeatStat.jspx";
+/*       var params = "searchOdCenterUid=" + jQuery("#searchOdCenterUid").val();
+      params += "&searchOdSeatTypeUid=" + jQuery("#searchOdSeatTypeUid").val();
+      params += "&searchUseDate=" + jQuery("#searchUseDate").val(); */
+      var params = jQuery("#frm").serialize(); 
+
+      //console.log(params);
+
+      jQuery
+            .ajax({
+               type : "post",
+               url : url,
+               data : params,
+               dataType : "JSON",
+               //async: false,
+               success : function(data) {
+                  jQuery("#previewBody").children().remove();
+
+                  var bodyImg = '';
+                  try {
+                     bodyImg = '<div style="position:absolute; top:0px; left:0px; width:'
+                           + data.image.seat_img_size_width
+                           + 'px; height:'
+                           + data.image.seat_img_size_height + 'px; ';
+                     bodyImg += 'background-image: url(\'../common/download.jspx?uid='
+                           + data.image.attchFileList[0].file_name + '\'); ';
+                     bodyImg += 'background-size: 100% 100%; "></div> ';
+                     jQuery("#previewBody").append(bodyImg);
+
+                     jQuery("#previewBody").height(
+                           data.image.seat_img_size_height);
+                  } catch (e) {
+                  }
+
+                  var svAll = data.list.length;
+                  var sv31 = 0;
+                  var sv32 = 0;
+                  var sv33 = 0;
+                  var sv34 = 0;
+
+                  jQuery("#svDate").text(jQuery("#searchUseDate").val());
+                  jQuery("#svAll").text(svAll);
+                  
+                  //console.log(data);
+
+                  for (var i = 0; i < data.list.length; i++) {
+                     
+                     //console.log(data.list[i].od_seat_type_status_cd);
+                     
+                     var res = data.list[i].seat_pos.split("|");
+                     var x = res[0];
+                     var y = res[1];
+                     var w = res[2];
+                     var h = res[3];
+                     //console.log(data.list[i].seat_pos, data.list[i].seat_name, x, y, w, h);
+                     
+                     var seatStr = ""; // ◐ ○ ●
+                     if (data.list[i].seat_enter_cd == '04') { // 퇴실
+                        seatStr = "○"; // 퇴실
+                     } else if (data.list[i].seat_enter_cd == '05') { // 외출
+                        seatStr = "◐"; // 외출
+                     } else if (data.list[i].seat_enter_cd == '01') { // 입실대기
+                        seatStr = "○"; // 입실대기
+                     } else if (data.list[i].seat_enter_cd == '02' || data.list[i].seat_enter_cd == '03') { // 입실
+                        seatStr = "●"; // 입실
+                     } else {
+                        seatStr = "";
+                     }
+                     
+                     var color = "";
+                     if (data.list[i].seat_status_cd == '31') { // 이용가능
+                        color = "#a0a0a0";
+                        sv31++;
+                     } else if (data.list[i].seat_status_cd == '33') { // 이용불가
+                        color = "#d15b47";
+                        sv33++;
+                     } else if (data.list[i].seat_status_cd == '32') { // 이용중
+                        color = "#3a87ad";
+                        sv32++;
+                     } else if (data.list[i].seat_status_cd == '34') { // 마감예정
+                        color = "#f89406";
+                        sv34++;
+                     } else { // 기타 - 이용불가
+                        color = "#d15b47";
+                     }
+
+                     var body = '<div class="dropup dropdown-hover" style="position:absolute; left:' + x + 'px; top:' + y + 'px; width:' + w + 'px; height:' + h + 'px; background: ' + color + '; text-align:left; vertical-align:middle;">';
+                     
+                     body += '<div class="box-index">';
+                     body += '   <span class="text">' + data.list[i].seat_name + '</span>';
+                     body += '</div>';
+                     body += '<div class="box-status">';
+                     body += '   <span class="text">' + seatStr + '</span>';
+                     body += '</div>';
+                     body += '<div class="box-detailed">';
+                     body += '   <p class="type">' + data.list[i].seat_title + '</p>';
+                     
+                     if (data.list[i].mobile_no != null && data.list[i].mobile_no != '') {
+                        body += '   <p class="tel">' + data.list[i].mobile_no + '</p>';
+                     }
+                     if (data.list[i].user_name != null && data.list[i].user_name != '') {
+                        if (h > 50) {
+                           body += '   <p class="user">' + data.list[i].user_name + '</p>';
+                        }
+                     }
+                     if (data.list[i].seat_use_edate != null && data.list[i].seat_use_edate != '') {
+                        var dateStr = data.list[i].seat_use_edate.substr(4, 2) + '-' + data.list[i].seat_use_edate.substr(6, 2);
+                        dateStr += ' ' + data.list[i].seat_use_edate.substr(8, 2) + ':' + data.list[i].seat_use_edate.substr(10, 2);
+                        
+                        body += '   <p class="date">' + dateStr + '</p>';
+                     }
+
+                     body += '</div>';
+                     
+                     /*
+                     if (data.list[i].resv_cnt != null && data.list[i].resv_cnt != 0) {
+                        body += '<span class="badge badge-pink">' + data.list[i].resv_cnt + '</span>';
+                     }
+                     body += '<br> ';
+                     */
+
+                     // 드랍다운 메뉴
+                     body += '<ul class="dropdown-menu dropdown-light">';
+                     body += '<li><a href="#" tabindex="-1">좌석 : ['
+                           + data.list[i].seat_title + '] '
+                           + data.list[i].seat_name + '</a></li>';
+                     body += '<li class="divider"></li>';
+                     
+                     if(data.list[i].status_cd != null && data.list[i].status_cd != '' && data.list[i].status_cd == '12'){
+                        body += '<li><a href="javascript:void(0);" tabindex="-1">결제대기상태</a></li>';
+                        
+                     } else {
+                        if (data.list[i].seat_status_cd == '31') { // 이용가능
+                           body += '<li><a href="javascript:odSeatClose(\''
+                                 + data.list[i].od_seat_uid
+                                 + '\');" tabindex="-1">사용불가 좌석으로 변경</a></li>';
+                           body += '<li><a href="#" onclick="odSeatReserveList(\''
+                                 + data.list[i].od_seat_uid
+                                 + '\');" tabindex="-1">예약현황</a></li>';
+                           body += '<li><a href="#" onclick="odSeatToInsert(\''
+                                 + data.list[i].od_seat_uid
+                                 + '\');" tabindex="-1">좌석등록</a></li>';
+                                 
+                           if (data.list[i].iot_device_id != null && data.list[i].iot_device_id != '') {
+
+                              if(data.list[i].iot_device_status == '01'){
+                                 body += '<li><a href="#" onclick="odSeatIotControl(\''
+                                    + data.list[i].od_seat_uid
+                                    + '\');" tabindex="-1">전등끄기</a></li>';
+                              }else{
+                                 body += '<li><a href="#" onclick="odSeatIotControl(\''
+                                    + data.list[i].od_seat_uid
+                                    + '\');" tabindex="-1">전등켜기</a></li>';
+                              }
+
+                           }
+                                 
+                        } else if (data.list[i].seat_status_cd == '33') { // 이용불가
+                           body += '<li><a href="javascript:odSeatReady(\''
+                                 + data.list[i].od_seat_uid
+                                 + '\');" tabindex="-1">사용가능 좌석으로 변경</a></li>';
+                           body += '<li><a href="#" onclick="odSeatReserveList(\''
+                                 + data.list[i].od_seat_uid
+                                 + '\');" tabindex="-1">예약현황</a></li>';
+                                 
+                           if (data.list[i].iot_device_id != null && data.list[i].iot_device_id != '') {
+
+                              if(data.list[i].iot_device_status == '01'){
+                                 body += '<li><a href="#" onclick="odSeatIotControl(\''
+                                    + data.list[i].od_seat_uid
+                                    + '\');" tabindex="-1">전등끄기</a></li>';
+                              }else{
+                                 body += '<li><a href="#" onclick="odSeatIotControl(\''
+                                    + data.list[i].od_seat_uid
+                                    + '\');" tabindex="-1">전등켜기</a></li>';
+                              }
+
+                           }
+                                 
+                        } else if (data.list[i].seat_status_cd == '32'
+                              || data.list[i].seat_status_cd == '34') { // 이용중, 마감예정
+
+                           var seat_use_last_date = data.list[i].seat_use_last_date;
+                           if (seat_use_last_date != '') {
+                              seat_use_last_date = "(" + seat_use_last_date
+                                    + "분 가능)";
+                           } else {
+                              seat_use_last_date = "(이후 예약 없음)";
+                           }
+
+                           var group_use_uid = '';
+                           if (data.list[i].status_cd == '12' || data.list[i].status_cd == '14'
+                                 || (data.list[i].group_use_uid != null && data.list[i].group_use_uid.indexOf(',') != -1)) {
+                              group_use_uid = '(구매대기)'; 
+                           }
+                           
+                           body += '<li><a href="#" onclick="odSeatUseInfo(\''
+                                 + data.list[i].od_seat_use_uid
+                                 + '\');" tabindex="-1">상세보기 ' + group_use_uid + '</a></li>';
+                           body += '<li><a href="javascript:odSeatUseEnd(\''
+                                 + data.list[i].od_seat_use_uid
+                                 + '\');" tabindex="-1">퇴실처리</a></li>';
+                           body += '<li><a href="#" onclick="odSeatUseExtend(\''
+                                 + data.list[i].od_seat_use_uid
+                                 + '\');" tabindex="-1">시간연장 '
+                                 + seat_use_last_date + '</a></li>';
+                           body += '<li><a href="#" onclick="odSeatUseChange(\''
+                                 + data.list[i].od_seat_use_uid
+                                 + '\');" tabindex="-1">좌석변경</a></li>';
+                           body += '<li><a href="#" onclick="odSeatReserveList(\''
+                                 + data.list[i].od_seat_uid
+                                 + '\');" tabindex="-1">예약현황</a></li>';
+                           body += '<li><a href="#" onclick="odSeatToInsert(\''
+                              + data.list[i].od_seat_uid
+                              + '\');" tabindex="-1">좌석등록</a></li>';
+                                 
+                           if (data.list[i].iot_device_id != null && data.list[i].iot_device_id != '') {
+
+                              if(data.list[i].iot_device_status == '01'){
+                                 body += '<li><a href="#" onclick="odSeatIotControl(\''
+                                    + data.list[i].od_seat_uid
+                                    + '\');" tabindex="-1">전등끄기</a></li>';
+                              }else{
+                                 body += '<li><a href="#" onclick="odSeatIotControl(\''
+                                    + data.list[i].od_seat_uid
+                                    + '\');" tabindex="-1">전등켜기</a></li>';
+                              }
+                              
+                           }
+                              
+                        }                        
+                        
+                     }
+
+                     body += '</ul>';
+
+                     body += '</div>';
+
+                     jQuery("#previewBody").append(body);
+
+                     try {
+                        jQuery("#previewBody").height(
+                              data.image.seat_img_size_height);
+                     } catch (e) {
+                     }
+                  }
+                  jQuery("#sv31").text(sv31);
+                  jQuery("#sv32").text(sv32);
+                  jQuery("#sv33").text(sv33);
+                  jQuery("#sv34").text(sv34);
+                  if (svAll == 0 || sv32 == 0) {
+                     jQuery("#svPer").text(0);
+                  } else {
+                     jQuery("#svPer").text((sv32 / svAll * 100).toFixed(2));
+                  }
+
+                  setTimeout(jQuery.unblockUI, 200);
+               },
+               error : function() {
+                  alert('Error');
+                  setTimeout(jQuery.unblockUI, 200);
+               }
+            });
+   }
+
+   // 시간연장 
+   function odSeatUseExtend(uid) {
+
+      var w = $(window).width();
+      if ($(window).width() >= 700) {
+         w = w - 300;
+      }
+      var h = $(window).height() - 100;
+
+      var url = "/odSeatUse/odSeatUseExtend.jspx";
+      var params = "uid=" + uid;
+      params += "&mid=c11";
+		/* window.location.href = url+"?"+params; */
+			setTimeout(function(){ $("#sub-popup").modal({
+      remote:url+"?"+params
+   }) }, 10);
+/*       jQuery
+            .ajax({
+               type : "post",
+               url : url,
+               data : params,
+               dataType : "TEXT",
+               //async: false,
+               success : function(data) {
+                  jQuery("#dialog-popup").children().remove();
+                  jQuery("#dialog-popup").append(data);
+
+                  var dialog = jQuery("#dialog-popup")
+                        .removeClass('hide')
+                        .dialog(
+                              {
+                                 modal : true,
+                                 title : "좌석이용 시간연장",
+                                 title_html : true,
+                                 width : w,
+                                 height : h,
+                                 buttons : [
+                                       {
+                                          html : "<i class='ace-icon fa fa-check bigger-110'></i> <span class='smaller-90'>수정</span>",
+                                          "class" : "btn btn-primary btn-minier",
+                                          click : function() {
+                                             //goReg();
+                                             jQuery("#btn_reg_hidden").trigger(
+                                                   'click');
+                                          }
+                                       },
+                                       {
+                                          html : "<i class='ace-icon fa fa-times bigger-110'></i> <span class='smaller-90'>닫기</span>",
+                                          "class" : "btn btn-primary btn-minier",
+                                          click : function() {
+                                             jQuery(this).dialog("close");
+                                          }
+                                       } ]
+                              });
+               },
+               error : function() {
+                  alert('Error');
+               }
+            }); */
+   }
+
+   // 좌석변경 
+   function odSeatUseChange(uid) {
+
+      var w = $(window).width();
+      if ($(window).width() >= 700) {
+         w = w - 300;
+      }
+      var h = $(window).height() - 100;
+
+      var url = "/odSeatUse/odSeatUseChange.jspx";
+      var params = "uid=" + uid;
+      params += "&mid=c11";
+	/* window.location.href = url+"?"+params; */
+		setTimeout(function(){ $("#sub-popup").modal({
+      remote:url+"?"+params
+   }) }, 10);
+/*       jQuery
+            .ajax({
+               type : "post",
+               url : url,
+               data : params,
+               dataType : "TEXT",
+               //async: false,
+               success : function(data) {
+                  jQuery("#dialog-popup").children().remove();
+                  jQuery("#dialog-popup").append(data);
+
+                  var dialog = jQuery("#dialog-popup")
+                        .removeClass('hide')
+                        .dialog(
+                              {
+                                 modal : true,
+                                 title : "좌석이용 좌석변경",
+                                 title_html : true,
+                                 width : w,
+                                 height : h,
+                                 buttons : [
+                                       {
+                                          html : "<i class='ace-icon fa fa-check bigger-110'></i> <span class='smaller-90'>수정</span>",
+                                          "class" : "btn btn-primary btn-minier",
+                                          click : function() {
+                                             //goReg();
+                                             jQuery("#btn_reg_hidden").trigger(
+                                                   'click');
+                                          }
+                                       },
+                                       {
+                                          html : "<i class='ace-icon fa fa-times bigger-110'></i> <span class='smaller-90'>닫기</span>",
+                                          "class" : "btn btn-primary btn-minier",
+                                          click : function() {
+                                             jQuery(this).dialog("close");
+                                          }
+                                       } ]
+                              });
+               },
+               error : function() {
+                  alert('Error');
+               }
+            }); */
+   }
+
+   // 퇴실처리 (사용중을 사용가능좌석으로)
+   function odSeatUseEnd(uid) {
+
+      if (confirm("퇴실처리 하시겠습니까?")) {
+         try{ jQuery.blockUI({ message: jQuery('#loading'), css:{ border: '0px solid #a00' }}); }catch(e) {}
+         
+         jQuery
+               .ajax({
+                  type : "POST",
+                  url : "/odSeatUse/forceCancelOdSeatUse.jspx",
+                  data : jQuery.param({
+                     "uid" : uid
+                  }, true),
+                  dataType : "json",
+                  //async: false,
+                  success : function(data) {
+                     if (data.result_yne == 'Y' && data.result_msg == '') {
+                        //alert("잠금되었습니다.");
+                        searchPreview();
+                     } else {
+                        alert("실패하였습니다.\n" + data.result_msg);
+                        searchPreview();
+                     }
+                     setTimeout(jQuery.unblockUI, 200);
+                  },
+                  error : function() {
+                     alert('Error');
+                     setTimeout(jQuery.unblockUI, 200);
+                  }
+               });
+      }
+
+   }
+
+   // 좌석이용(예약)현황
+   function odSeatReserveList(uid) {
+
+      var w = $(window).width();
+      if ($(window).width() >= 700) {
+         w = w - 300;
+      }
+      var h = $(window).height() - 100;
+
+      var startDate = moment(new Date()).format("YYYYMMDDHHmm");
+
+      var url = "/odSeatUse/odSeatUseList.jspx";
+      var params = "searchSeatUid=" + uid;
+      params += "&searchSeatUseSdate=" + startDate;
+      params += "&isView=Y";
+      params += "&mid=z13";
+	/* window.location.href = url+"?"+params; */
+		setTimeout(function(){ $("#sub-popup").modal({
+      remote:url+"?"+params
+   }) }, 10);
+      //console.log(params);
+
+/*       jQuery
+            .ajax({
+               type : "post",
+               url : url,
+               data : params,
+               dataType : "TEXT",
+               //async: false,
+               success : function(data) {
+                  jQuery("#dialog-popup").children().remove();
+                  jQuery("#dialog-popup").append(data);
+
+                  var dialog = jQuery("#dialog-popup")
+                        .removeClass('hide')
+                        .dialog(
+                              {
+                                 open : function(event, ui) {
+                                    jQuery(this).parent().focus();
+                                 },
+                                 modal : true,
+                                 title : "좌석예약 현황",
+                                 title_html : true,
+                                 width : w,
+                                 height : h,
+                                 buttons : [ {
+                                    html : "<i class='ace-icon fa fa-times bigger-110'></i> <span class='smaller-90'>닫기</span>",
+                                    "class" : "btn btn-primary btn-minier",
+                                    click : function() {
+                                       jQuery(this).dialog("close");
+                                    }
+                                 } ]
+                              });
+               },
+               error : function() {
+                  alert('Error');
+               }
+            }); */
+   }
+
+   // 사용불가좌석
+   function odSeatClose(uid) {
+
+      if (confirm("사용불가 좌석으로 변경시겠습니까?")) {
+         try{ jQuery.blockUI({ message: jQuery('#loading'), css:{ border: '0px solid #a00' }}); }catch(e) {}
+         
+         jQuery.ajax({
+            type : "POST",
+            url : "/odSeat/lockOdSeat.jspx",
+            data : jQuery.param({
+               "uid" : uid
+            }, true),
+            dataType : "json",
+            //async: false,
+            success : function(data) {
+               if (data.result_yne == 'Y' && data.result_msg == '') {
+                  //alert("잠금되었습니다.");
+                  searchPreview();
+               } else {
+                  alert("실패하였습니다.\n" + data.result_msg);
+                  searchPreview();
+               }
+               setTimeout(jQuery.unblockUI, 200);
+            },
+            error : function() {
+               alert('Error');
+               setTimeout(jQuery.unblockUI, 200);
+            }
+         });
+      }
+   }
+
+   // 사용가능좌석
+   function odSeatReady(uid) {
+
+      if (confirm("사용가능 좌석으로 변경시겠습니까?")) {
+         try{ jQuery.blockUI({ message: jQuery('#loading'), css:{ border: '0px solid #a00' }}); }catch(e) {}
+         
+         jQuery
+               .ajax({
+                  type : "POST",
+                  url : "/odSeat/unlockOdSeat.jspx",
+                  data : jQuery.param({
+                     "uid" : uid
+                  }, true),
+                  dataType : "json",
+                  //async: false,
+                  success : function(data) {
+                     if (data.result_yne == 'Y' && data.result_msg == '') {
+                        //alert("잠금되었습니다.");
+                        searchPreview();
+                     } else {
+                        alert("실패하였습니다.\n" + data.result_msg);
+                        searchPreview();
+                     }
+                     setTimeout(jQuery.unblockUI, 200);
+                  },
+                  error : function() {
+                     alert('Error');
+                     setTimeout(jQuery.unblockUI, 200);
+                  }
+               });
+      }
+
+   }
+
+   // 좌석이용정보
+   function odSeatUseInfo(uid) {
+
+      var w = $(window).width();
+      if ($(window).width() >= 700) {
+         w = w - 300;
+      }
+      var h = $(window).height() - 100;
+
+      var url = "/odSeatUse/selectOdSeatUse.jspx";
+      var params = "uid=" + uid;
+      params += "&mid=c11";
+	/* window.location.href = url+"?"+params; */
+		setTimeout(function(){ $("#sub-popup").modal({
+      remote:url+"?"+params
+   }) }, 10);
+/*       jQuery
+            .ajax({
+               type : "post",
+               url : url,
+               data : params,
+               dataType : "TEXT",
+               //async: false,
+               success : function(data) {
+                  jQuery("#dialog-popup").children().remove();
+                  jQuery("#dialog-popup").append(data);
+
+                  var dialog = jQuery("#dialog-popup")
+                        .removeClass('hide')
+                        .dialog(
+                              {
+                                 open : function(event, ui) {
+                                    jQuery(this).parent().focus();
+                                 },
+                                 modal : true,
+                                 title : "좌석이용 정보",
+                                 title_html : true,
+                                 width : w,
+                                 height : h,
+                                 buttons : [ {
+                                    html : "<i class='ace-icon fa fa-times bigger-110'></i> <span class='smaller-90'>닫기</span>",
+                                    "class" : "btn btn-primary btn-minier",
+                                    click : function() {
+                                       jQuery(this).dialog("close");
+                                    }
+                                 } ]
+                              });
+               },
+               error : function() {
+                  alert('Error');
+               }
+            }); */
+   }
+   
+   // IOT 제어
+   function odSeatIotControl(uid) {
+
+      if (confirm("전등을 제어 하시겠습니까?")) {
+         try{ jQuery.blockUI({ message: jQuery('#loading'), css:{ border: '0px solid #a00' }}); }catch(e) {}
+         
+         jQuery.ajax({
+            type : "POST",
+            url : "/odSeat/seatIotControl.jspx",
+            data : jQuery.param({
+               "uid" : uid
+            }, true),
+            dataType : "json",
+            //async: false,
+            success : function(data) {
+               if (data.result_yne == 'Y' && data.result_msg == '') {
+                  //alert("잠금되었습니다.");
+                  searchPreview();
+               } else {
+                  alert("실패하였습니다.\n" + data.result_msg);
+                  searchPreview();
+               }
+               setTimeout(jQuery.unblockUI, 200);
+            },
+            error : function() {
+               alert('Error');
+               setTimeout(jQuery.unblockUI, 200);
+            }
+         });
+      }
+   }
+
+   //조회
+   function goView(uid, status) {
+
+      var w = $(window).width();
+      if ($(window).width() >= 700) {
+         w = w - 300;
+      }
+      var h = $(window).height() - 100;
+
+      var url = "/odSeatUse/selectOdSeatUse.jspx";
+      var params = "uid=" + uid;
+
+      jQuery
+            .ajax({
+               type : "post",
+               url : url,
+               data : params,
+               dataType : "TEXT",
+               //async: false,
+               success : function(data) {
+                  jQuery("#dialog-popup").children().remove();
+                  jQuery("#dialog-popup").append(data);
+
+                  var dialog = jQuery("#dialog-popup")
+                        .removeClass('hide')
+                        .dialog(
+                              {
+                                 open : function(event, ui) {
+                                    jQuery(this).parent().focus();
+                                 },
+                                 modal : true,
+                                 title : "좌석이용 정보",
+                                 title_html : true,
+                                 width : w,
+                                 height : h,
+                                 buttons : [
+                                       {
+                                          html : "<i class='ace-icon fa fa-pencil-square-o bigger-110'></i> <span class='smaller-90'>수정</span>",
+                                          "class" : "btn btn-success btn-minier",
+                                          click : function() {
+                                             goEdit(uid);
+                                          }
+                                       },
+                                       {
+                                          html : "<i class='ace-icon fa fa-trash-o bigger-110'></i> <span class='smaller-90'>삭제</span>",
+                                          "class" : "btn btn-danger btn-minier",
+                                          click : function() {
+                                             goDel(uid);
+                                             jQuery(this).dialog("close");
+                                          }
+                                       },
+                                       {
+                                          html : "<i class='ace-icon fa fa-times bigger-110'></i> <span class='smaller-90'>닫기</span>",
+                                          "class" : "btn btn-primary btn-minier",
+                                          click : function() {
+                                             jQuery(this).dialog("close");
+                                          }
+                                       } ]
+                              });
+
+                  // 추가로 생성한 버튼
+                  if (status == '01') {
+
+                     var buttonAdd = dialog.parent().find(
+                           '.ui-dialog-buttonset');
+                     var id = 'btn-' + new Date().valueOf().toString();
+                     buttonAdd
+                           .prepend('<button type="button" class="btn btn-minier" id="' + id + '"><i class="ace-icon fa fa-lock bigger-90"></i> <span class="smaller-90">잠금</span></button>');
+                     jQuery('#' + id).button().click(function() {
+                        goLock(uid);
+                        dialog.dialog("close");
+                     });
+
+                  } else {
+
+                     var buttonAdd = dialog.parent().find(
+                           '.ui-dialog-buttonset');
+                     var id = 'btn-' + new Date().valueOf().toString();
+                     buttonAdd
+                           .prepend('<button type="button" class="btn btn-minier" id="' + id + '"><i class="ace-icon fa fa-unlock bigger-110"></i> <span class="smaller-90">잠금해제</span></button>');
+                     jQuery('#' + id).button().click(function() {
+                        goUnlock(uid);
+                        dialog.dialog("close");
+                     });
+                  }
+               },
+               error : function() {
+                  alert('Error');
+               }
+            });
+   }
+
+   // 수정
+   function goEdit(uid) {
+
+      var w = $(window).width();
+      if ($(window).width() >= 700) {
+         w = w - 300;
+      }
+      var h = $(window).height() - 100;
+
+      var url = "/odSeatUse/odSeatUseModify.jspx";
+      var params = "uid=" + uid;
+
+      jQuery
+            .ajax({
+               type : "post",
+               url : url,
+               data : params,
+               dataType : "TEXT",
+               //async: false,
+               success : function(data) {
+                  jQuery("#dialog-popup").children().remove();
+                  jQuery("#dialog-popup").append(data);
+
+                  var dialog = jQuery("#dialog-popup")
+                        .removeClass('hide')
+                        .dialog(
+                              {
+                                 modal : true,
+                                 title : "좌석이용 수정",
+                                 title_html : true,
+                                 width : w,
+                                 height : h,
+                                 buttons : [
+                                       {
+                                          html : "<i class='ace-icon fa fa-check bigger-110'></i> <span class='smaller-90'>수정</span>",
+                                          "class" : "btn btn-primary btn-minier",
+                                          click : function() {
+                                             //goReg();
+                                             jQuery("#btn_reg_hidden").trigger(
+                                                   'click');
+                                          }
+                                       },
+                                       {
+                                          html : "<i class='ace-icon fa fa-times bigger-110'></i> <span class='smaller-90'>닫기</span>",
+                                          "class" : "btn btn-primary btn-minier",
+                                          click : function() {
+                                             jQuery(this).dialog("close");
+                                          }
+                                       } ]
+                              });
+               },
+               error : function() {
+                  alert('Error');
+               }
+            });
+   }
+
+   // 삭제
+   function goDel(uid) {
+
+      var check_uid = [];
+      check_uid.push(uid);
+
+      goDelList(uid);
+   }
+   function goDelList(uid) {
+
+      if (confirm("정말 삭제 하시겠습니까?")) {
+         try{ jQuery.blockUI({ message: jQuery('#loading'), css:{ border: '0px solid #a00' }}); }catch(e) {}
+         
+         jQuery
+               .ajax({
+                  type : "POST",
+                  url : "/odSeatUse/deleteOdSeatUse.jspx",
+                  data : jQuery.param({
+                     "uid" : uid
+                  }, true),
+                  dataType : "json",
+                  //async: false,
+                  success : function(data) {
+                     if (data.result_yne == 'Y' && data.result_msg == '') {
+                        //alert("삭제되었습니다.");
+                        try {
+                           jQuery("#dialog-popup").dialog("close");
+                        } catch (e) {
+                        }
+                        searchPreview();
+                     } else {
+                        if (data.totalCnt == '1') {
+                           alert("삭제에 실패하였습니다.\n" + data.result_msg);
+                        } else {
+                           alert(data.totalCnt + "건중 " + data.successCnt
+                                 + "건이 삭제되었습니다.");
+                           searchPreview();
+                        }
+                     }
+                     setTimeout(jQuery.unblockUI, 200);
+                  },
+                  error : function() {
+                     alert('Error');
+                     setTimeout(jQuery.unblockUI, 200);
+                  }
+               });
+      }
+   }
+
+   // 잠금
+   function goLock(uid) {
+
+      var check_uid = [];
+      check_uid.push(uid);
+
+      goLockList(uid);
+   }
+   function goLockList(uid) {
+
+      if (confirm("정말 잠그시겠습니까?")) {
+         jQuery
+               .ajax({
+                  type : "POST",
+                  url : "/odSeatUse/lockOdSeatUse.jspx",
+                  data : jQuery.param({
+                     "uid" : uid
+                  }, true),
+                  dataType : "json",
+                  //async: false,
+                  success : function(data) {
+                     if (data.result_yne == 'Y' && data.result_msg == '') {
+                        //alert("잠금되었습니다.");
+                        try {
+                           jQuery("#dialog-popup").dialog("close");
+                        } catch (e) {
+                        }
+                        searchPreview();
+                     } else {
+                        if (data.totalCnt == '1') {
+                           alert("잠금에 실패하였습니다.\n" + data.result_msg);
+                        } else {
+                           alert(data.totalCnt + "건중 " + data.successCnt
+                                 + "건이 잠금되었습니다.");
+                           searchPreview();
+                        }
+                     }
+                  },
+                  error : function() {
+                     alert('Error');
+                  }
+               });
+      }
+   }
+
+   // 잠금해제
+   function goUnlock(uid) {
+
+      var check_uid = [];
+      check_uid.push(uid);
+
+      goUnlockList(uid);
+   }
+   function goUnlockList(uid) {
+
+      if (confirm("정말 잠금을 해제 하시겠습니까?")) {
+         jQuery
+               .ajax({
+                  type : "POST",
+                  url : "/odSeatUse/unlockOdSeatUse.jspx",
+                  data : jQuery.param({
+                     "uid" : uid
+                  }, true),
+                  dataType : "json",
+                  //async: false,
+                  success : function(data) {
+                     if (data.result_yne == 'Y' && data.result_msg == '') {
+                        //alert("잠금해제되었습니다.");
+                        try {
+                           jQuery("#dialog-popup").dialog("close");
+                        } catch (e) {
+                        }
+                        searchPreview();
+                     } else {
+                        if (data.totalCnt == '1') {
+                           alert("잠금해제에 실패하였습니다.\n" + data.result_msg);
+                        } else {
+                           alert(data.totalCnt + "건중 " + data.successCnt
+                                 + "건이 잠금해제되었습니다.");
+                           searchPreview();
+                        }
+                     }
+                  },
+                  error : function() {
+                     alert('Error');
+                  }
+               });
+      }
+   }
+
+   // 센터좌석유형 가져오기
+   function getOdSeatType(od_center_uid, seat_type_cd, id) {
+
+      //console.log(od_center_uid);
+
+      var url = "/odSeatTypeUse/selectOdSeatTypeUseListAjax.jspx";
+      var params = "searchOdCenterUid=" + od_center_uid + "&seat_type_cd="
+            + seat_type_cd;
+
+      jQuery.ajax({
+         type : "post",
+         url : url,
+         data : params,
+         dataType : "JSON",
+         async : false,
+         success : function(data) {
+            //jQuery("#searchOdSeatTypeUid").children().remove();
+            jQuery("#" + id).children().remove();
+
+            //jQuery("#searchOdSeatTypeUid").append("<option value=''>전체</option>");
+            jQuery("#" + id).append("<option value=''>전체</option>");
+
+            for (var i = 0; i < data.list.length; i++) {
+               var list = data.list[i];
+
+               // 전체 안보이게
+               if (i == 0 && list.center_type_cd != '01') {
+                  jQuery("#" + id).children().remove();
+               }
+
+               //jQuery("#searchOdSeatTypeUid").append("<option value='" + list.od_seat_type_uid + "'>" + list.seat_title + "</option>");
+               jQuery("#" + id).append(
+                     "<option value='" + list.od_seat_type_uid + "'>"
+                           + list.seat_title + "</option>");
+            }
+            setTimeout(jQuery.unblockUI, 200);
+         },
+         error : function() {
+            alert('Error');
+            setTimeout(jQuery.unblockUI, 200);
+         }
+      });
+   }
+   
+   // 좌석등록
+   function odSeatToInsert(uid) {
+
+      var w = $(window).width();
+      if ($(window).width() >= 700) {
+         w = w - 300;
+      }
+      var h = $(window).height() - 100;
+
+      var startDate = moment(new Date()).format("YYYYMMDDHHmm");
+
+      var url = "/odSeatUse/odSeatToInsert.jspx";
+      var params = "searchSeatUid=" + uid;
+      params += "&searchSeatUseSdate=" + startDate;
+      params += "&isView=Y";
+      params += "&mid=z13";
+	/* window.location.href = url+"?"+params; */
+		setTimeout(function(){ $("#sub-popup").modal({
+      remote:url+"?"+params
+   }) }, 10);
+      //console.log(params);
+
+/*       jQuery
+            .ajax({
+               type : "post",
+               url : url,
+               data : params,
+               dataType : "TEXT",
+               //async: false,
+               success : function(data) {
+                  jQuery("#dialog-popup").children().remove();
+                  jQuery("#dialog-popup").append(data);
+
+                  var dialog = jQuery("#dialog-popup")
+                        .removeClass('hide')
+                        .dialog(
+                              {
+                                 open : function(event, ui) {
+                                    jQuery(this).parent().focus();
+                                 },
+                                 modal : true,
+                                 title : "좌석예약 현황",
+                                 title_html : true,
+                                 width : w,
+                                 height : h,
+                                 buttons : [ {
+                                    html : "<i class='ace-icon fa fa-times bigger-110'></i> <span class='smaller-90'>닫기</span>",
+                                    "class" : "btn btn-primary btn-minier",
+                                    click : function() {
+                                       jQuery(this).dialog("close");
+                                    }
+                                 } ]
+                              });
+               },
+               error : function() {
+                  alert('Error');
+               }
+            }); */
+   }
+</script>
+
+<style type="text/css">
+.p {
+	display: table-cell;
+	text-align: left;
+	vertical-align: top;
+	margin: 0px;
+   padding: 5px;
+   line-height: 17px;
+}
+
+/* [2019-12-19] 추가 */
+.box-inner {overflow:hidden;position:relative;height:100%}
+.box-inner * {}
+.box-index {position:absolute;left:3px;top:4px;}
+.box-index .text {color:#fff;font-size:15px}
+.box-status {position:absolute;right:3px;top:4px}
+.box-status .text {color:#fff;font-size:15px;}
+.box-detailed {position:absolute;left:3px;bottom:4px;}
+.box-detailed p {color:#fff;font-size:11px;margin-bottom:1px;font-weight:100;}
+.box-detailed .is-hidden {display:none}
+.dropup[data-height="type3"] .box-detailed {max-height:33px}
+.dropup[data-height="type2"] .box-detailed {max-height:21px}
+.dropup[data-height="type1"] .box-detailed {max-height:10px}
+.dropup[data-height="type1"] p:not(.tel) {display:none}
+</style>
+<script>
+$(document).ready(function(){
+   var dropup = $('.dropup');
+
+   dropup.each(function(){
+      var height = $(this).height();
+      var menu = $(this).find('.dropdown-menu');
+
+      $(this).wrapInner('<div class="box-inner">');
+      menu.prependTo(this);
+
+      if(height >= 70) {
+
+      }else if (height >= 60){
+         $(this).attr('data-height','type3');
+      }else if (height >= 45) {
+         $(this).attr('data-height','type2');
+         (!$(this).find('.user')) ? null : $(this).find('.type').addClass('is-hidden');
+      } else {
+         $(this).attr('data-height','type1');
+      }
+
+   });
+
+})
+   
+</script>
+<script src="./index_files/bootstrap-datetimepicker.js.다운로드"></script>
+<link rel="stylesheet" href="./index_files/bootstrap-datetimepicker.css">
+<div id="ascrail2000" class="nicescroll-rails" style="width: 7px; z-index: auto; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 0;"><div style="position: relative; top: 0px; float: right; width: 5px; height: 272px; background-color: rgb(66, 66, 66); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px;"></div></div><div id="ascrail2000-hr" class="nicescroll-rails" style="height: 7px; z-index: auto; position: fixed; left: 0px; width: 100%; bottom: 0px; cursor: default; display: block; opacity: 0;"><div style="position: relative; top: 0px; height: 5px; width: 697px; background-color: rgb(66, 66, 66); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px; left: 0px;"></div></div><div id="ascrail2001" class="nicescroll-rails" style="width: 7px; z-index: 99; cursor: default; position: fixed; top: 0px; left: 203px; height: 956px; display: none; opacity: 1;"><div style="position: relative; top: 0px; float: right; width: 5px; height: 0px; background-color: rgb(66, 66, 66); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px;"></div></div><div id="ascrail2001-hr" class="nicescroll-rails" style="height: 7px; z-index: 99; top: 949px; left: 0px; position: fixed; cursor: default; display: none; opacity: 1;"><div style="position: relative; top: 0px; height: 5px; width: 0px; background-color: rgb(66, 66, 66); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px; left: 0px;"></div></div></body></html>
