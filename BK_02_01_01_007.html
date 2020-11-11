@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예가람저축은행 논스톱</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="예가람저축은행 모집인 상담사" />
+	<meta name="description" content="법인 및 상담사 소개, 고객센터, 대출신청" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link href="/resources/css/default.css" rel="stylesheet" />
+    <link href="/resources/css/layout.css" rel="stylesheet" />
+    <link href="/resources/css/contents.css" rel="stylesheet" />
+	<link href="/resources/css/swiper.min.css" rel="stylesheet" />
+
+    <script src="/resources/js/lib/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="/resources/js/lib/TweenMax.min.js" type="text/javascript"></script>
+    <script src="/resources/js/lib/default.js" type="text/javascript"></script>
+    <script src="/resources/js/lib/ui.js" type="text/javascript"></script>
+	<script src="/resources/js/lib/swiper.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var depth1 = 1;
+    </script>
+    <style>
+        
+    #fixedBtnWrap {
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: -30px;
+        height: 30px;
+        width: 100vw;
+        background: yellow;}
+    #fixedBtnWrap.is-sticky {bottom:0}
+    </style>
+</head>
+<body>
+	<!-- ********** Include ********** -->
+	<!-- s:skipnavi -->
+	<ul id="skipnavi">
+	    <li><a href="#contentsWrap">본문 바로가기</a></li>
+	    <li><a href="#footerWrap">하단 바로가기</a></li>
+	</ul>
+	<!-- ********** //Include ********** -->
+	<!-- //e:skipnavi -->
+	<!-- s:wrap -->
+	<div id="wrap">
+        
+        <!-- s:headerWrap -->
+        <div id="headerWrap">
+	        <div class="header sub-shadow">
+                <a class="btn-back" href="#">이전페이지 이동하기</a>
+	            <h2><span>이체정보입력</span></h2>
+	        </div>
+            <div class="menu-wrap">
+                <a class="btn-menu" href="#">메뉴보기</a>
+				<!-- <a class="btn-close" href="#">닫기</a> -->
+			</div>
+	    </div>
+        <!-- //e:headerWrap -->
+        <!-- s:menuRight -->
+        <!-- ********** Include ********** -->
+        <script type="text/javascript" src="/guide/js/publish_allmenu.js"></script> <!-- 퍼블용 : 전체메뉴 인클루드 -->
+        <!-- ********** //Include ********** -->
+	    <!-- //e:menuRight -->
+
+	    <!-- s contentsWrap -->
+	    <div id="contentsWrap" class="bg-ffffff">
+	        <!-- s:contents -->
+	        <div class="contents">
+                <div class="step-wrap type2 flex-con default-wrap">
+                    <div class="col1 txt">이체정보입력</div>
+                    <div class="col1 num"><strong>1</strong><span class="tot">/4</span></div>
+                </div>
+                <div class="acc-list-wrap acc-all">
+                    <div class="acc-list-area acc-select-area">
+                        <div class="acc-list">
+                            <div class="acc-select-box" tabindex="0" onclick="openPopupUp('accSelect');">
+                                <span class="tit">보통예금(비대면)</span>
+                                <span class="num">011-01-01-7700567</span>
+                            </div>
+                            <a href="#" class="btn sm">이체한도</a>
+                            <p class="acc-sum">잔액 <span class="price"><strong>8,000,000</strong>원</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="default-wrap mt20 mb5">
+                    <div class="form-wrap">
+                        <p class="input-tit">계좌비밀번호*</p><!-- 2020-06-08 -->
+                        <input type="password" id="input1" placeholder="계좌비밀번호를 입력해주세요.">
+                    </div>
+                </div>
+                <hr class="line">
+                <div class="trans-sort-wrap">
+                    <p class="s-tit">입금은행*</p><!-- 2020-06-08 -->
+                    <div class="bank-sel-area">
+                        <button class="btn md" onclick="openPopupUp('accTrans');">최근입금</button>
+                        <button class="btn md" onclick="openPopupUp('accTrans');">자주쓰는</button>
+                        <button class="btn md" onclick="openPopupUp('accTrans');">내계좌</button>
+                        <button class="btn md" onclick="openPopupUp('accTrans');">입금지정</button><!-- 2020-05-21 -->
+                    </div>
+                </div>
+                <div class="default-wrap mt20 pb25">
+                    <div class="form-wrap mb5">
+                        <p class="input-tit">은행*</p><!-- 2020-06-08 -->
+                        <div class="select-wrap">
+                            <div class="select-box" tabindex="1"><!-- 선택 후 on 추가 -->
+                                <span class="placeholder">입금은행을 선택해주세요.</span>
+                                <span class="label">우리은행</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-wrap mb5">
+                        <p class="input-tit">계좌번호*</p><!-- 2020-06-08 -->
+                        <input type="tel" placeholder="입금은행 계좌번호를 입력해주세요.">
+                    </div>
+                    <div class="form-wrap mb5">
+                        <p class="input-tit">전자납부번호*</p>
+                        <div class="flex-con type-num">
+                            <div class="col1 mw100"><input type="tel" value="0126" readonly></div>
+                            <div class="col1"><input type="tel"></div>
+                        </div>
+                    </div>
+                    <div class="form-wrap pb0">
+                        <p class="input-tit">혼합식적금 입금 구분</p>
+                        <div class="select-wrap">
+                            <div class="select-box on" tabindex="1" onclick="openPopupUp('sel1');"><!-- 선택 후 on 추가 -->
+                                <span class="placeholder"></span>
+                                <span class="label">대상 조회</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="eee">
+                <div class="trans-sum-area">
+                    <p class="s-tit">이체금액*</p><!-- 2020-06-08 -->
+                    <div class="sum-area fnSelDate">
+                        <button>1만</button>
+                        <button>5만</button>
+                        <button>10만</button>
+                        <button>100만</button>
+                        <button>전액</button>
+                    </div>
+                    <div class="form-wrap">
+                        <input type="text" id="input1" placeholder="이체할 금액을 입력해주세요.">
+                        <div class="unit-txt">원</div><!--단위 텍스트가 있을때-->
+                        <p class="ta-r mt5"><strong>오만</strong>원</p>
+                    </div>
+                </div>
+                <hr class="eee">
+                <div class="default-wrap mt25 mb25">
+                    <p class="s-tit">자주쓰는 계좌등록*
+                        <label for="check" class="check level1 fl-r in-sub"><input type="checkbox" name="radio" id="check">등록</label>
+                    </p><!-- 2020-06-08 -->
+                    <div class="form-wrap mt20 pb0" style="display:none">
+                        <input type="text" placeholder="별칭 입력해주세요.">
+                    </div>
+                </div>
+                <hr class="line">
+                <div class="fnSlide mb40">
+                    <div class="slide-list-wrap slide-default-wrap">
+                        <div class="tit">
+                            <a href="#none">선택정보</a>
+                        </div>
+                        <div class="slide-list-area slide-default-area" style="display:none">
+                            <div class="form-wrap mb5">
+                                <p class="input-tit">받는분 통장표시</p>
+                                <input type="text" placeholder="" value="한가람(예가람저축은행)">
+                            </div>
+                            <div class="form-wrap pb0">
+                                <p class="input-tit">내 통장표시</p>
+                                <input type="text" placeholder="10자 이내로 입력해주세요.">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2020-05-21// -->
+                <div class="link-list-wrap mb40">
+                    <div class="link-list"><a href="#none" class="link"><strong>추가이체등록 <span class="color-DC0082">1</span>건</strong></a></div>
+                </div>
+                <!-- //2020-05-21 -->
+            </div>
+            <!-- //e:contents -->
+        </div>
+        <!-- //e: contentsWrap -->
+
+        <!-- s : 이체계좌선택 -->
+        <div id="accTrans" class="layerpopup layer-up">
+            <div class="content-wrap lypop-type3">
+                <button type="button" name="button" class="btn-menu-close" data-focus="btn-menu-close">닫기</button>
+                <div class="ly-select">
+                    <div class="date-sel-area">
+                        <button class="on">최근입금</button>
+                        <button>자주쓰는</button>
+                        <button>내계좌</button>
+                        <button>입금지정</button><!-- 2020-05-21 -->
+                    </div>
+                    <div class="ly-scroll-con">
+                        <div class="no-data">
+                            <p>최근 이체내역이 없습니다.</p>
+                            <p>자주쓰는 계좌가 없습니다.</p>
+                        </div>
+                        <!-- 최근입금 -->
+                        <div class="trans-list-area">
+                            <a href="#none" class="trans-list">
+                                <p class="info">2020.04.09</p>
+                                <strong class="tit">예가람저축은행</strong>
+                                <span class="num">011-01-01-7700567</span>
+                                <p class="name">홍길순</p>
+                            </a>
+                            <a href="#none" class="trans-list">
+                                <p class="info">2020.04.09</p>
+                                <strong class="tit">예가람저축은행</strong>
+                                <span class="num">011-01-01-7700567</span>
+                                <p class="name">홍길순</p>
+                            </a>
+                        </div>
+                        <!-- //최근입금 -->
+                        <!-- 자주쓰는 -->
+                        <div class="trans-list-area">
+                            <a href="#none" class="trans-list">
+                                <p class="info">생활비</p>
+                                <strong class="tit">기업은행</strong>
+                                <span class="num">011-01-01-7700567</span>
+                                <p class="name">홍길순</p>
+                            </a>
+                            <a href="#none" class="trans-list">
+                                <p class="info">생활비</p>
+                                <strong class="tit">기업은행</strong>
+                                <span class="num">011-01-01-7700567</span>
+                                <p class="name">홍길순</p>
+                            </a>
+                        </div>
+                        <!-- //자주쓰는 -->
+                        <!-- 내계좌 -->
+                        <div class="trans-list-area my-acc-list">
+                            <a href="#none" class="trans-list">
+                                <strong class="tit">보통예금(비대면)</strong>
+                                <span class="num">011-01-01-7700567</span>
+                            </a>
+                            <a href="#none" class="trans-list">
+                                <strong class="tit">보통예금(비대면)</strong>
+                                <span class="num">011-01-01-7700567</span>
+                            </a>
+                        </div>
+                        <!-- //내계좌 -->
+                        <!-- 입금지정 -->
+                        <div class="trans-list-area my-acc-list">
+                            <a href="#none" class="trans-list">
+                                <strong class="tit">보통예금(비대면)</strong>
+                                <span class="num">011-01-01-7700567</span>
+                            </a>
+                            <a href="#none" class="trans-list">
+                                <strong class="tit">보통예금(비대면)</strong>
+                                <span class="num">011-01-01-7700567</span>
+                            </a>
+                        </div>
+                        <!-- //입금지정 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //e : 이체계좌선택 -->
+
+        <!-- s : 계좌선택 -->
+        <div id="accSelect" class="layerpopup layer-up">
+            <div class="content-wrap lypop-type2">
+                <div class="pop-header"><span>계좌를 선택해주세요.</span></div>
+                <button type="button" name="button" class="btn-menu-close" data-focus="btn-menu-close">닫기</button>
+                <div class="ly-scroll-con ly-acc-select">
+                    <div class="acc-list-area">
+                        <a href="#none" class="acc-list" onclick="">
+                            <span class="tit">보통예금(비대면)</span>
+                            <span class="num">011-01-01-7700567</span>
+                        </a>
+                        <a href="#none" class="acc-list">
+                            <span class="tit">예가람 멤버십 정기적금</span>
+                            <span class="num">580-82-29-7732111</span>
+                        </a>
+                        <a href="#none" class="acc-list">
+                            <span class="tit">정기예금(복리)</span>
+                            <span class="num">049-61-13-0011111</span>
+                        </a>
+                        <a href="#none" class="acc-list">
+                            <span class="tit">정기예금(복리)</span>
+                            <span class="num">049-61-13-0011111</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //e : 계좌선택 -->
+        <!-- s :혼합식적금 구분  -->
+        <div id="sel1" class="layerpopup layer-up">
+            <div class="content-wrap lypop-type2">
+                <div class="pop-header"><span>혼합식적금 입금 구분</span></div>
+                <button type="button" name="button" class="btn-menu-close" data-focus="btn-menu-close">닫기</button>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button><strong>대상선택</strong></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //e : 혼합식적금 구분 -->
+
+        <!-- s : 지연이체 서비스 대상자 제한 -->
+        <div id="txtNotice" class="layerpopup layer-up">
+            <div class="content-wrap lypop-type2">
+                <div class="pop-header"><span>지연이체 서비스 대상자 제한</span></div>
+                <button type="button" name="button" class="btn-menu-close" data-focus="btn-menu-close">닫기</button>
+                <div class="ly-content">
+                    <div class="default-wrap pb20 ta-c">
+                        <p class="color-464646">
+                            고객님은 지연이체 서비스 대상자입니다.<br>
+                            지연이체 서비스를 이용하여<br>이체하여 주시기 바랍니다.
+                        </p>
+                        <p class="color-2D2D2D mt5">지연이체 서비스로 이동하시겠습니까?</p>
+                    </div>
+                    <div class="btn-wrap flex-con">
+                        <div class="col1">
+                            <a href="#none" class="btn md darkgray" onclick="closePopupUp('txtNotice');">취소</a>
+                        </div>
+                        <div class="col2">
+                            <a href="#none" class="btn md gray active">확인</a>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <!-- //e : 지연이체 서비스 대상자 제한 -->
+        <!-- s : 지연이체 서비스 대상자 -->
+        <div id="txtNotice4" class="layerpopup layer-up">
+            <div class="content-wrap lypop-type2">
+                <div class="pop-header"><span>지연이체 서비스 대상자</span></div>
+                <button type="button" name="button" class="btn-menu-close" data-focus="btn-menu-close">닫기</button>
+                <div class="ly-content">
+                    <div class="default-wrap pb20 ta-c">
+                        <p class="color-464646">
+                            고객님은 지연이체 서비스 대상자입니다.<br>
+                            즉시이체를 원하실 경우 <strong class="color-DC0082">추가인증</strong> 후<br>이용하여 주시기 바랍니다.<br>
+                            (즉시이체 시 1일 누적 100만원까지 가능)
+                        </p>
+                        <div class="form-wrap mt15 pb0">
+                            <div class="flex-con center">
+                                <label for="trans1" class="radio"><input type="radio" name="trans" id="trans1" checked><strong>지연이체</strong></label>
+                                <label for="trans2" class="radio"><input type="radio" name="trans" id="trans2"><strong>즉시이체</strong></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-wrap flex-con">
+                        <div class="col1">
+                            <a href="#none" class="btn md gray active">확인</a>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <!-- //e : 지연이체 서비스 대상자 -->
+        
+        <!-- s fixedBtnWrap -->
+        <div id="fixedBtnWrap" class="flex-con">
+            <div class="col1">
+                <a href="#none" class="btn lg gray active">이체</a>
+            </div>
+	    </div>
+        <!-- //e: fixedBtnWrap -->
+	</div>
+    <!-- //e:wrap -->
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(function(){
+            //openPopupUp('txtNotice'); //퍼블확인용 스크립트
+            //openPopupUp('txtNotice4'); //퍼블확인용 스크립트
+        })
+    </script>
+    <script>
+        $(function(){
+            var shotCon = false;
+            var contentWrapH = $('#contentsWrap').outerHeight() - 25;
+            var contentH = $('.contents').outerHeight();
+            var windowH = $(window).height();
+
+            if ($('#fixedBtnWrap').length > 0) {
+                // if (contentWrapH <= windowH) {
+                //     shotCon = true;
+                //     $('#fixedBtnWrap').addClass('active');
+                // }
+                if (contentH < windowH) {
+                    shotCon = true;
+                    $('#fixedBtnWrap').addClass('is-sticky');
+                }
+                $(window).scroll(function() {
+                    if (!shotCon) {
+                        if ($(this).scrollTop() > 5) {
+                            $('#fixedBtnWrap').addClass('is-sticky');
+                        } else {
+                            $('#fixedBtnWrap').removeClass('is-sticky');
+                        }
+                    }
+                });
+            }
+        })
+    </script>
+</body>
+</html>
